@@ -1,71 +1,3 @@
-// const express = require('express')
-
-// const app = express()
-
-// app.get('', (req, res) => {
-//     res.send('Hello v')
-// })
-
-// app.get('/help', (req, res) => {
-//     res.send('Help page.')
-// })
-
-// app.get('/about', (req, res) => {
-//     res.send('About app page')
-// })
-
-// app.get('/weather', (req, res) => {
-//     res.send('See weather')
-// })
-
-// app.com
-// app.com/help 
-// app.com/about
-// cntl C for shutdown server
-
-// give path of directory or folder and file name
-// console.log(__dirname)
-// console.log(__filename)
-
-///////////////////////////////////
-
-// const express = require('express')
-
-// const path = require('path')
-
-// const app = express()
-// const publicDirectoryPath = path.join(__dirname, '../public')
-
-// app.use(express.static(publicDirectoryPath))
-
-// app.get('', (req, res) => {
-//     res.send('<h1>Weather</h1>')
-// })
-
-// app.get('/help', (req, res) => {
-//     res.send([{
-//         name: 'Vipin',
-//         age: 27
-//     }, {
-//         name: 'Yadav',
-//     }])
-// })
-
-// app.get('/about', (req, res) => {
-//     res.send('<h1>About the app.</h1>')
-// })
-
-// app.get('/weather', (req, res) => {
-//     res.send({
-//         forecast: 'Forecast is 26 degrees',
-//         location: 'Delhi'
-//     })
-// })
-
-// app.listen(3000, () => {
-//     console.log('Server is up on port 3000.')
-// })
-
 /////////////////////////////
 
 const express = require('express')
@@ -75,6 +7,8 @@ const geocode = require ('./utils/geocode')
 const forecast = require ('./utils/forecast')
 
 const app = express()
+// for heroku server port or local server 3000 if not heroku
+const port = process.env.PORT || 3000
 
 // define paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -176,6 +110,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port '+ port)
 })
