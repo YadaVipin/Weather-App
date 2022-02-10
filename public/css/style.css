@@ -65,14 +65,14 @@ button {
     padding: 8px;
 }
 
-.message-1 {
-    color: #352f3d;
-    margin-right: 15px;
-    text-decoration: none;
+#message-1 {
+    color: #131212;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
 }
 
-.message-2 {
-    color: #352f3d;
-    margin-right: 15px;
-    text-decoration: none;
+#message-2 {
+    color: #131212;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
 }
