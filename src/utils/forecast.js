@@ -6,13 +6,14 @@ const forecast = (latitude, longitude, callback) => {
 
     request({url, json: true}, (error,{body}) => {
         // console.log(response)
-        const temp =  ((body.current.temperature - 32)*5/9).toFixed(1) 
+        const temp =  ((body.current.temperature - 32)*5/9).toFixed(1)
+        const temp1 = ((body.current.feelslike -32)*5/9).toFixed(1) 
         if (error) {
             callback('Unable to connect to weather server!'), undefined
         } else if (body.error) {
             callback('Unable to find location!'), undefined
         } else {
-            callback(undefined, "It's "+ body.current.weather_descriptions[0] + " outside, Temprature is currently " + temp + " degree celsius outside. It feels like " + body.current.feelslike )
+            callback(undefined, "It's "+ body.current.weather_descriptions[0] + " outside, Temprature is currently " + temp + " degree celsius outside. It feels like " + temp1 )
         }
     })
 }

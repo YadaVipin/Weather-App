@@ -64,3 +64,15 @@ button {
     color: white;
     padding: 8px;
 }
+
+.message-1 {
+    color: #352f3d;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.message-2 {
+    color: #352f3d;
+    margin-right: 15px;
+    text-decoration: none;
+}
